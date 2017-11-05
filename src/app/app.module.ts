@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
-import { MatToolbarModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatToolbarModule, MatButtonModule } from '@angular/material';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -14,6 +15,8 @@ import { SubcontractingComponent } from './subcontracting/subcontracting.compone
 import { CareersComponent } from './careers/careers.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AboutComponent } from './about/about.component';
+
+import 'hammerjs';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,9 @@ import { AboutComponent } from './about/about.component';
     BrowserModule,
     BrowserAnimationsModule,
     HttpModule,
+    FlexLayoutModule,
     MatToolbarModule,
+    MatButtonModule,
     AppRoutingModule
   ],
   providers: [],

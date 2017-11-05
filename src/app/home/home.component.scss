@@ -1,18 +1,60 @@
-#containerImage {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
+$dark-font: #272727;
 
 .jumbotronImage {
     width: 100%;
-    height: 800px;
+    height: 100%;
 
     margin: 0;
-    padding: 0;
+    padding: 175px 0px;
 
     position: relative;
-    top: -21px;
+    top: 0px;
 
     z-index: -99999999;
+
+    text-align: center;
+
+    #jumbotronContent {
+        position: relative;
+
+        color: white;
+
+        #imageContainer {
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        p {
+            font-size: 24px;
+            position: relative;
+            top: 20px;
+        }
+    }
+}
+
+.content {
+    padding: 55px;
+    color: $dark-font;
+
+    h1 {
+        font-size: 86px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+.imgContainer {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
 }
