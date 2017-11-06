@@ -1,10 +1,16 @@
 <div class="container"
   fxLayout="row"
-  fxLayout.sm="column"
   fxLayoutGap="10px">
 
-  <div fxFlex="40">
-    Project Details
+  <div fxFlex=100>
+    <mat-card *ngIf="project">
+      <mat-card-header>
+        <mat-card-title><h1>{{ project.address | uppercase }}</h1></mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ project.description }}</p>
+      </mat-card-content>
+    </mat-card>
   </div>
 
 </div>

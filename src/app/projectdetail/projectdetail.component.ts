@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { Params, ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
@@ -13,14 +13,12 @@ import { ProjectService } from '../services/project.service';
 })
 export class ProjectdetailComponent implements OnInit {
 
+  @Input()
   project: Project;
 
   constructor(private projectservice: ProjectService, private route: ActivatedRoute, private location: Location) { }
 
   ngOnInit() {
-    let id = +this.route.snapshot.params['id'];
-    this.projectservice.getProject(id)
-      .then(project => this.project = project);
   }
 
 }
