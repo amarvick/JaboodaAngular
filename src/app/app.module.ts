@@ -18,6 +18,9 @@ import { AboutComponent } from './about/about.component';
 
 import 'hammerjs';
 
+import { ListingService } from './services/listing.service';
+import { ProjectdetailComponent } from './projectdetail/projectdetail.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +31,8 @@ import 'hammerjs';
     SubcontractingComponent,
     CareersComponent,
     ContactusComponent,
-    AboutComponent
+    AboutComponent,
+    ProjectdetailComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,9 @@ import 'hammerjs';
     MatButtonModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    ListingService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

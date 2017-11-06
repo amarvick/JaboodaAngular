@@ -27,7 +27,11 @@
     "@angular/router": "^4.2.4",
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
+<<<<<<< HEAD
     "hammerjs": "^2.0.8",
+=======
+    "mdbootstrap": "^4.4.3",
+>>>>>>> 496fa446adbbb3e39f71e1bbc55d07108c03a94d
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"
   },
