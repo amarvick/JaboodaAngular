@@ -20,6 +20,7 @@ import { AboutComponent } from './about/about.component';
 import 'hammerjs';
 
 import { ProjectService } from './services/project.service';
+import { CareerService } from './services/career.service';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { ProjectService } from './services/project.service';
     AppRoutingModule
   ],
   providers: [
-    ProjectService
+    ProjectService,
+    CareerService
   ],
   bootstrap: [AppComponent]
 })
