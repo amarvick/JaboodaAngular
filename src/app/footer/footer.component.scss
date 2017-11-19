@@ -1,4 +1,33 @@
+$dark-font: #272727;
+
 mat-toolbar {
     background-color: #01427C;
     color: white;
+}
+
+.outercontainer {
+	padding: 10px; 
+	background-color: #01427C;
+    color: white;
+}
+
+.container {
+	padding: 10px; 
+    color: white;
+}
+
+.rowText {
+	padding: 5px; 
+
+	  h1 {
+        font-size: 86px;
+    }
+
+    div {
+        font-size: 15px;
+    }
+}
+
+ul{ 
+	list-style-type: none; 
 }
