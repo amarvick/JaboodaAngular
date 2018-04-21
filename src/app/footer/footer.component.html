@@ -1,13 +1,17 @@
 
-<!-- OUTER COLUMN -->
+<!-- OUTER ROW -->
 <div class="outercontainer"
 	fxLayout="row"
-	fxLayoutAlign="center start">
+	fxLayoutAlign="space-evenly center">
 
-	<!-- OUTER ROW -->
+
+	<div fxFlex="5"></div>
+
+
+	<!-- PAGES -->
 	<div class="container"
-	  fxLayout="row"
-	  fxFlex="50">
+	fxLayout="column"
+	  fxFlex="7">
 
 		<!-- LEFT PAGES -->
 
@@ -22,6 +26,13 @@
 			</a> </li>
 		</ul>
 
+	</div>
+
+	<div class="container"
+	fxLayout="column"
+	  fxFlex="20">
+		<!-- RIGHT PAGES -->
+
 		<ul>
 			<li> <a routerLink="/about" routerLinkActive="active"> About
 			</a> </li>
@@ -35,16 +46,34 @@
 	
 	</div>
 
+
+	<!-- LOGOS -->
 	<div class="container"
-	  fxLayout="row"
-	  fxFlex="50">
+	  fxFlex="33"
+	  fxLayoutAlign="center center">
 
-	  <p> COL 2</p>
+	 <img src="../assets/images/combinedlogos.png">
 
-	  </div>
+	 </div>
+
+	 <!-- CONTACT US -->
+	 <div class="container"
+	  fxFlex="33"
+	  fxLayout="column" 
+	  fxLayoutAlign="center center">
+
+
+	 <div>  Contact Us </div> 
+
+	 <div>
+	 <i class="fa fa-map-marker fa-2x"> </i>
+	 <i class="fa fa-envelope fa-2x"> </i>
+	 <i class="fa fa-phone fa-2x"> </i>
+	 </div>
+
+	 </div>
 
 </div>
-
 
 
 
