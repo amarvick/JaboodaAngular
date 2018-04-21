@@ -21,9 +21,9 @@ import 'hammerjs';
 
 import { ProjectService } from './services/project.service';
 import { CareerService } from './services/career.service';
-// import { DialogDemoComponent } from './dialog-demo/dialog-demo.component';
-// import { MyDialogComponent } from './my-dialog/my-dialog.component';
+import { ProjectDialogComponent } from './project-dialog/project-dialog.component';
 
+import { FormsModule, FormGroup, FormBuilder, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,8 +36,8 @@ import { CareerService } from './services/career.service';
     CareersComponent,
     ContactusComponent,
     AboutComponent,
-    ProjectdetailComponent
-    // MyDialogComponent
+    ProjectdetailComponent,
+    ProjectDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -50,13 +50,15 @@ import { CareerService } from './services/career.service';
     MatGridListModule,
     MatListModule,
     MatDialogModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     ProjectService,
     CareerService
   ],
   bootstrap: [AppComponent],
-  // entryComponents: [MyDialogComponent]
+  entryComponents: [ProjectDialogComponent]
 })
 export class AppModule { }

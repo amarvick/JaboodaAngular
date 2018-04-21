@@ -9,3 +9,5 @@ a, a:hover, a:visited {
     text-decoration: none;
     color: white;
 }
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css'; // This centers the modal in the projects page... why?
