@@ -1,15 +1,19 @@
-<div>
-<h2 mat-dialog-title>MODAL!</h2>
+<div class="container"
+  fxLayout="row"
+  fxLayoutGap="10px">
 
-<mat-dialog-content>
-  
-    <mat-form-field>
-        HI!
-    </mat-form-field>
- 
-</mat-dialog-content>
+  <div>
+    <mat-select [(ngModel)] = "selectedProject">
+      <mat-option *ngFor="let project of projects">
+        <img src="{{ project.images }}">
+      </mat-option>
+    </mat-select>
+  </div>
 
-<mat-dialog-actions>
-    <button class="mat-raised-button"(click)="close()">Close</button>
-</mat-dialog-actions>
+  <div mat-dialog-actions>
+    <button mat-button (click)="confirmSelection()" color="primary">
+      Cancel
+    </button>
+  </div>
+
 </div>

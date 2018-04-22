@@ -4,6 +4,7 @@ import { HomeComponent } from '../home/home.component';
 import { AboutComponent } from '../about/about.component';
 import { ProjectsComponent } from '../projects/projects.component';
 import { ProjectdetailComponent } from '../projectdetail/projectdetail.component';
+import { ProjectDialogComponent } from '../project-dialog/project-dialog.component';
 import { SubcontractingComponent } from '../subcontracting/subcontracting.component';
 import { CareersComponent } from '../careers/careers.component';
 import { ContactusComponent } from '../contactus/contactus.component';

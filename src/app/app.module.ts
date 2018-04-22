@@ -12,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectdetailComponent } from './projectdetail/projectdetail.component';
+import { ProjectDialogComponent } from './project-dialog/project-dialog.component';
 import { SubcontractingComponent } from './subcontracting/subcontracting.component';
 import { CareersComponent } from './careers/careers.component';
 import { ContactusComponent } from './contactus/contactus.component';
@@ -21,7 +22,6 @@ import 'hammerjs';
 
 import { ProjectService } from './services/project.service';
 import { CareerService } from './services/career.service';
-import { ProjectDialogComponent } from './project-dialog/project-dialog.component';
 
 import { FormsModule, FormGroup, FormBuilder, ReactiveFormsModule } from '@angular/forms';
 

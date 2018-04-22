@@ -15,7 +15,6 @@ import { ProjectService } from '../services/project.service';
 export class ProjectsComponent implements OnInit {
 
   projects: Project[];
-
   selectedProject: Project;
 
   constructor(private projectService: ProjectService, private dialog: MatDialog) { }
@@ -29,15 +28,9 @@ export class ProjectsComponent implements OnInit {
     this.selectedProject = project;
   }
 
-  openDialog(): void {
-    const dialogConfig = new MatDialogConfig();
+  openDialog() {
+    let dialog = this.dialog.open(ProjectDialogComponent);
 
-    dialogConfig.disableClose = true;
-
-    this.dialog.open(ProjectDialogComponent, {
-      height: '150px',
-      width: '200px'
-    });
   }
 
 }

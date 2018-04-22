@@ -6,7 +6,8 @@
     <app-projectdetail [project]="selectedProject" (click)="openDialog()"></app-projectdetail> 
   </div> 
 
-  <div fxFlex=10></div>
+  <div fxFlex=10>
+  </div>
 
   <div fxFlex=30 *ngIf="projects">
     <mat-grid-list cols="1" rowHeight="300px">
@@ -17,5 +18,6 @@
         </mat-grid-tile-footer>
       </mat-grid-tile>
     </mat-grid-list>
-  </div> 
+  </div>
+
 </div>

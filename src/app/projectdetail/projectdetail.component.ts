@@ -18,8 +18,6 @@ export class ProjectdetailComponent implements OnInit {
 
   constructor(private projectservice: ProjectService, private route: ActivatedRoute, private location: Location) { }
 
-  ngOnInit() {
-    /* This initialized function should take the first project from the data and display it by default, while allowing the user to still change the displayed picture by clicking on any of the projects */
-  }
+  ngOnInit() { }
 
 }
