@@ -2,18 +2,13 @@
   fxLayout="row"
   fxLayoutGap="10px">
 
-  <div>
-    <mat-select [(ngModel)] = "selectedProject">
-      <mat-option *ngFor="let project of projects">
-        <img src="{{ project.images }}">
-      </mat-option>
-    </mat-select>
+  <div fxFlex=100>
+    <mat-card>
+      <mat-card-content>
+        <p>Address: {{ data.address }}</p>
+      </mat-card-content>
+    </mat-card>
   </div>
-
-  <div mat-dialog-actions>
-    <button mat-button (click)="confirmSelection()" color="primary">
-      Cancel
-    </button>
-  </div>
+  <button (click)="close()">Close</button>
 
 </div>

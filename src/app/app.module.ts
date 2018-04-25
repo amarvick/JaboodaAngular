@@ -2,8 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatToolbarModule, MatButtonModule, MatCardModule, MatGridListModule, MatListModule, MatDialogModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatCardModule, MatGridListModule, MatListModule } from '@angular/material';
+import { MatDialogModule } from '@angular/material/dialog';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -43,6 +45,7 @@ import { FormsModule, FormGroup, FormBuilder, ReactiveFormsModule } from '@angul
     BrowserModule,
     BrowserAnimationsModule,
     HttpModule,
+    HttpClientModule,
     FlexLayoutModule,
     MatToolbarModule,
     MatButtonModule,

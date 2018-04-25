@@ -1,5 +1,5 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { MatDialog, MatDialogConfig, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { Component, OnInit, Inject, Optional } from '@angular/core';
+import { MatDialog } from '@angular/material';
 
 import { ProjectDialogComponent } from '../project-dialog/project-dialog.component';
 
@@ -17,6 +17,8 @@ export class ProjectsComponent implements OnInit {
   projects: Project[];
   selectedProject: Project;
 
+  address: string;
+
   constructor(private projectService: ProjectService, private dialog: MatDialog) { }
 
   ngOnInit() {
@@ -28,27 +30,11 @@ export class ProjectsComponent implements OnInit {
     this.selectedProject = project;
   }
 
-  openDialog() {
-    let dialog = this.dialog.open(ProjectDialogComponent);
-
+  openDialog(project: Project): void {
+    let dialogRef = this.dialog.open(ProjectDialogComponent, {
+      data: {
+        address: this.selectedProject.address
+      }
+    })
   }
-
-}
-
-@Component({
-  selector: 'app-project-dialog',
-  templateUrl: '../project-dialog/project-dialog.component.html',
-  styleUrls: ['../project-dialog/project-dialog.component.scss']
-})
-
-export class ProjectDialogComponentInPage {
-
-  constructor(
-    public dialogRef: MatDialogRef<ProjectDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any) { }
-
-    close() {
-      this.dialogRef.close();
-    }
-
 }

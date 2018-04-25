@@ -3,10 +3,11 @@
   fxLayout.xs="column">  
 
   <div fxFlex=60>
-    <app-projectdetail [project]="selectedProject" (click)="openDialog()"></app-projectdetail> 
+    <app-projectdetail [project]="selectedProject" (click)="openDialog(selectedProject)"></app-projectdetail> 
   </div> 
 
   <div fxFlex=10>
+    
   </div>
 
   <div fxFlex=30 *ngIf="projects">
@@ -14,10 +15,16 @@
       <mat-grid-tile *ngFor="let project of projects" (click)="onSelect(project)">
         <img src="{{ project.images }}">
         <mat-grid-tile-footer>
-          <h1 mat-line>{{ project.address | uppercase }}</h1>
+          <h1 mat-line ngDefaultControl>{{ project.address | uppercase }}</h1>
         </mat-grid-tile-footer>
       </mat-grid-tile>
     </mat-grid-list>
   </div>
 
+  <div style="display: none;">
+    <!-- <app-project-dialog [project]="selectedProject"></app-project-dialog> -->
+  </div>
+
 </div>
+
+<!-- -->

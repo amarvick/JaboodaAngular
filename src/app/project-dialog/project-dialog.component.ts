@@ -1,8 +1,5 @@
-import { Component } from '@angular/core';
-import { MatDialog, MatDialogConfig, MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
-
-import { Params } from '@angular/router';
-import { FormsModule, FormGroup, FormBuilder } from '@angular/forms';
+import { Component, OnInit, Inject, Optional  } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
 
 import { Project } from '../shared/project';
 import { ProjectService } from '../services/project.service';
@@ -13,20 +10,20 @@ import { ProjectService } from '../services/project.service';
   styleUrls: ['./project-dialog.component.scss']
 })
 export class ProjectDialogComponent {
-
-  projects: Project[];
-  selectedProject: Project;
+  public values;
+  project: Project;
 
   constructor(
-        private dialogRef: MatDialogRef<ProjectDialogComponent>,
-        private projectService: ProjectService,
-        private dialog: MatDialog
+        @Optional() @Inject(MAT_DIALOG_DATA) public data: any,
+        private dialogRef: MatDialogRef<ProjectDialogComponent>
   ) { }
 
-  ngOnInit() { }
+  ngOnInit(): void { 
+    this.values = this.data;
+  }
 
-  confirmSelection() {
-    this.dialogRef.close(this.selectedProject);
+  close() {
+    this.dialogRef.close(this.project);
   }
 
 }
