@@ -13,11 +13,8 @@ import { ProjectService } from '../services/project.service';
 })
 
 export class ProjectsComponent implements OnInit {
-
   projects: Project[];
   selectedProject: Project;
-
-  address: string;
 
   constructor(private projectService: ProjectService, private dialog: MatDialog) { }
 
@@ -33,7 +30,8 @@ export class ProjectsComponent implements OnInit {
   openDialog(project: Project): void {
     let dialogRef = this.dialog.open(ProjectDialogComponent, {
       data: {
-        address: this.selectedProject.address
+        address: this.selectedProject.address,
+        images: this.selectedProject.images
       }
     })
   }
