@@ -4,7 +4,7 @@
 
   <div fxFlex=100>
     <mat-card *ngIf="project">
-      <img src="{{ project.images }}">
+      <img src="{{ project.images }}" (click)="openDialog(selectedProject)">
       <mat-card-header>
         <mat-card-title><h1>{{ project.address | uppercase }}</h1></mat-card-title>
       </mat-card-header>

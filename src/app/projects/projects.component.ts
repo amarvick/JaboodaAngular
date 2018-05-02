@@ -27,12 +27,4 @@ export class ProjectsComponent implements OnInit {
     this.selectedProject = project;
   }
 
-  openDialog(project: Project): void {
-    let dialogRef = this.dialog.open(ProjectDialogComponent, {
-      data: {
-        address: this.selectedProject.address,
-        images: this.selectedProject.images
-      }
-    })
-  }
 }
