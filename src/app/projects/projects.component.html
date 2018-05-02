@@ -6,14 +6,12 @@
     <app-projectdetail [project]="selectedProject" (click)="openDialog(selectedProject)"></app-projectdetail> 
   </div> 
 
-  <div fxFlex=10>
-    
-  </div>
 
-  <div fxFlex=30 *ngIf="projects">
+
+  <div fxFlex=40 *ngIf="projects">
     <mat-grid-list cols="1" rowHeight="300px">
       <mat-grid-tile *ngFor="let project of projects" (click)="onSelect(project)">
-        <img src="{{ project.images }}">
+        <img src="{{ project.images[0] }}">
         <mat-grid-tile-footer>
           <h1 mat-line ngDefaultControl>{{ project.address | uppercase }}</h1>
         </mat-grid-tile-footer>

@@ -4,10 +4,17 @@
 
   <div fxFlex=100>
     <mat-card *ngIf="project">
-      <img src="{{ project.images }}" (click)="openDialog(selectedProject)">
+      <img src="{{ project.images[0] }}" (click)="openDialog(selectedProject)">
       <mat-card-header>
         <mat-card-title><h1>{{ project.address | uppercase }}</h1></mat-card-title>
       </mat-card-header>
+      <div id="preWrapper">
+        <div id="imageWrapper">
+          <div id="imageContainer" *ngFor="let image of project.images">
+            <img src="{{ image }}"/>
+          </div>
+        </div>
+      </div>
       <mat-card-content>
         <p>{{ project.description }}</p>
       </mat-card-content>
