@@ -15,9 +15,4 @@ export class ProjectService {
     return PROJECTS.filter((project) => (project.id === id))[0];
   }
 
-  // Work on this 
-  getPhoto(images: string): Project {
-    return PROJECTS.filter((project) => (project.images[project.id] === images))[0];
-  }
-
 }
