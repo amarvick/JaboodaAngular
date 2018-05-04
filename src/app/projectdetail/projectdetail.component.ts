@@ -16,7 +16,6 @@ export class ProjectdetailComponent implements OnInit {
   @Input()
   project: Project;
   projects: Project[];
-  selectedProject: Project;
   image: String;
   mainImage: String;
 
