@@ -11,4 +11,16 @@ $dark-font: #272727;
     p {
         font-size: 20px;
     }
+    a {
+    color: #004378
+    }  
+
+    a:hover {
+    transition: .2s ease;
+    color: #ffffff;
+    }
+
 }
+
+
+
