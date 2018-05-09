@@ -4,7 +4,7 @@ const path = require('path');
 const port = process.env.PORT || 8000;
 const server = require('http').Server(app);
 
-app.use(express.static(__dirname));
+app.use(express.static(__dirname) + '/src');
 
 // app.listen(process.env.PORT || 3000, function() {
 //     console.log('Console Listening on Port 8080');
