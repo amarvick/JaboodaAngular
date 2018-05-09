@@ -4,12 +4,12 @@ const path = require('path');
 
 app.use(express.static(__dirname) + '/src');
 
-app.listen(process.env.PORT || 8080);
+app.listen(process.env.PORT || 3000, function() {
+    console.log('Console Listening on Port 8080');
+});
 
 // PathLocationStrategy
 
 app.get('/*', function(req, res) {
     res.sendFile(path.join(__dirname + '/src/index.html'));
 })
-
-console.log('Console listening! Port 8080');
