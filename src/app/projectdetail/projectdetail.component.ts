@@ -30,7 +30,7 @@ export class ProjectdetailComponent implements OnInit {
     let dialogRef = this.dialog.open(ProjectDialogComponent, {
       data: {
         address: this.project.address,
-        images: this.project.images
+        images: this.mainImage
       }
     })
   }

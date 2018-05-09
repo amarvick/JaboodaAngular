@@ -8,13 +8,13 @@
       <mat-card-header>
         <mat-card-title><h1>{{ project.address | uppercase }}</h1></mat-card-title>
       </mat-card-header>
-      <div id="preWrapper">
-        <div id="imageWrapper">
-          <div id="imageContainer" *ngFor="let image of project.images">
+      <mat-card-content id="preWrapper">
+        <mat-card-content id="imageWrapper">
+          <mat-card-content id="imageContainer" *ngFor="let image of project.images">
             <img src="{{ image }}" (click)="changeImage(image)" />
-          </div>
-        </div>
-      </div>
+          </mat-card-content>
+        </mat-card-content>
+      </mat-card-content>
       <mat-card-content>
         <p>{{ project.description }}</p>
       </mat-card-content>
