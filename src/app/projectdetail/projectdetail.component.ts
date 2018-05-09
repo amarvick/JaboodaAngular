@@ -1,7 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Inject, Input, SimpleChanges } from '@angular/core';
+import { MatDialog } from '@angular/material';
 
-import { Params, ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
+import { ProjectDialogComponent } from '../project-dialog/project-dialog.component';
 
 import { Project } from '../shared/project';
 import { ProjectService } from '../services/project.service';
@@ -15,11 +15,39 @@ export class ProjectdetailComponent implements OnInit {
 
   @Input()
   project: Project;
+  projects: Project[];
+  image: String;
+  mainImage: String;
 
-  constructor(private projectservice: ProjectService, private route: ActivatedRoute, private location: Location) { }
+  constructor(private projectService: ProjectService, private dialog: MatDialog) { }
 
-  ngOnInit() {
-    /* This initialized function should take the first project from the data and display it by default, while allowing the user to still change the displayed picture by clicking on any of the projects */
+  ngOnInit() { 
+    this.mainImage = this.projectService.getProject(0).images[0];
   }
 
+  // Opens up Photo Gallery
+  openDialog(project: Project): void {
+    let dialogRef = this.dialog.open(ProjectDialogComponent, {
+      data: {
+        address: this.project.address,
+        images: this.mainImage
+      }
+    })
+  }
+
+  // Changes the Main Image when any GALLERY PHOTO is selected
+  changeImage(image: String) {
+    this.mainImage = image;
+  }
+
+  // Changes the Main Image when another PROJECT is selected
+  ngOnChanges(changes: SimpleChanges) {
+    for (let propName in changes) {
+      if(propName === 'project') {
+        Promise.resolve(null).then(() =>
+          {this.mainImage = this.project.images[0]}
+        );
+      }
+    }
+  }
 }

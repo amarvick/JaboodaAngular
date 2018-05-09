@@ -2,20 +2,22 @@
   fxLayout.sm="row"
   fxLayout.xs="column">  
 
-  <div fxFlex=60>
-    <app-projectdetail [project]="selectedProject" (click)="openDialog()"></app-projectdetail> 
+  <div fxFlex=40>
+    <app-projectdetail [project]="selectedProject"></app-projectdetail> 
   </div> 
 
-  <div fxFlex=10></div>
+  <div fxFlex=40></div>
 
-  <div fxFlex=30 *ngIf="projects">
+  <div fxFlex=20 *ngIf="projects">
     <mat-grid-list cols="1" rowHeight="300px">
-      <mat-grid-tile *ngFor="let project of projects" (click)="onSelect(project)">
-        <img src="{{ project.images }}">
+      <mat-grid-tile *ngFor="let project of projects" (click)="onSelect(project)"
+        flex-offset-sm>
+        <img src="{{ project.images[0] }}">
         <mat-grid-tile-footer>
-          <h1 mat-line>{{ project.address | uppercase }}</h1>
+          <h1 mat-line ngDefaultControl>{{ project.address | uppercase }}</h1>
         </mat-grid-tile-footer>
       </mat-grid-tile>
     </mat-grid-list>
-  </div> 
+  </div>
+
 </div>
