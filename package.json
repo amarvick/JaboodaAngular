@@ -28,6 +28,7 @@
     "angular-hammer": "^2.2.0",
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
+    "hoek": "^5.0.3",
     "mdbootstrap": "^4.4.3",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"
