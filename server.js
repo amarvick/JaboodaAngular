@@ -6,13 +6,13 @@ const server = require('http').Server(app);
 
 app.use(express.static(__dirname) + '/src');
 
-// app.listen(process.env.PORT || 3000, function() {
-//     console.log('Console Listening on Port 8080');
-// });
+app.listen(process.env.PORT || 3000, function() {
+    console.log('Console Listening on Port 8080');
+});
 
-server.listen(port, function() {
-    console.log("App running on port " + port);
-})
+// server.listen(port, function() {
+//     console.log("App running on port " + port);
+// })
 
 // PathLocationStrategy
 
