@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatToolbarModule, MatButtonModule, MatCardModule, MatGridListModule, MatListModule } from '@angular/material';
 import { MatDialogModule } from '@angular/material/dialog';
+import { Routes, RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -22,10 +23,14 @@ import { AboutComponent } from './about/about.component';
 
 import 'hammerjs';
 
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 import { ProjectService } from './services/project.service';
 import { CareerService } from './services/career.service';
 
 import { FormsModule, FormGroup, FormBuilder, ReactiveFormsModule } from '@angular/forms';
+
+import { routes } from './app-routing/routes';
 
 @NgModule({
   declarations: [
@@ -55,11 +60,13 @@ import { FormsModule, FormGroup, FormBuilder, ReactiveFormsModule } from '@angul
     MatDialogModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes, { useHash: true })
   ],
   providers: [
     ProjectService,
-    CareerService
+    CareerService,
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
   bootstrap: [AppComponent],
   entryComponents: [ProjectDialogComponent]
