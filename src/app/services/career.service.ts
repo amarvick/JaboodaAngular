@@ -6,6 +6,10 @@ import { CAREERS } from '../shared/careers';
 @Injectable()
 export class CareerService {
 
+	getCareers(): Career[] {
+		return CAREERS; 
+	}
+
   constructor() { }
 
 }

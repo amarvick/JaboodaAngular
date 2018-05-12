@@ -15,6 +15,7 @@ export class CareersComponent implements OnInit {
   constructor(private careerService: CareerService) { }
 
   ngOnInit() {
+  	this.careers = this.careerService.getCareers(); 
   }
 
 }
