@@ -78,7 +78,7 @@ export const CAREERS: Career[]  = [
 	headline: "Primary responsibilities include", 
 	requirements: [ 
 	'Build and repair wooden structures',
-	'Measure, cut and assemble lumber with precision'
+	'Measure, cut and assemble lumber with precision',
 	'Be able to analyze blueprints with a strong attention to detail',
 	'Be able to lift and carry heavy framing lumber, sheets of plywood and other materials',
 	'Strong analytical and mathematical skills'

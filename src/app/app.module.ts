@@ -58,6 +58,7 @@ import { routes } from './app-routing/routes';
     MatGridListModule,
     MatListModule,
     MatDialogModule,
+    MatListModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
