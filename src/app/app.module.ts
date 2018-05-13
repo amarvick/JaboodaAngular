@@ -23,8 +23,6 @@ import { AboutComponent } from './about/about.component';
 
 import 'hammerjs';
 
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-
 import { ProjectService } from './services/project.service';
 import { CareerService } from './services/career.service';
 
@@ -61,13 +59,11 @@ import { routes } from './app-routing/routes';
     MatListModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule,
-    RouterModule.forRoot(routes, { useHash: true })
+    ReactiveFormsModule
   ],
   providers: [
     ProjectService,
-    CareerService,
-    { provide: LocationStrategy, useClass: HashLocationStrategy }
+    CareerService
   ],
   bootstrap: [AppComponent],
   entryComponents: [ProjectDialogComponent]
