@@ -1,5 +1,10 @@
 $dark-font: #272727;
 
+body {
+    height: 110%;
+    position: absolute;
+}
+
 mat-toolbar {
     background-color: #01427C;
     color: white;
