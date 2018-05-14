@@ -6,6 +6,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatToolbarModule, MatButtonModule, MatCardModule, MatGridListModule, MatListModule } from '@angular/material';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatMenuModule } from '@angular/material/menu';
 import { Routes, RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 
@@ -56,7 +58,9 @@ import { routes } from './app-routing/routes';
     MatGridListModule,
     MatListModule,
     MatDialogModule,
+    MatSidenavModule,
     MatListModule,
+    MatMenuModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule
