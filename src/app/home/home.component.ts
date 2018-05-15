@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, Optional } from '@angular/core';
+
+import { Project } from '../shared/project';
+import { ProjectService } from '../services/project.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  projects: Project[];
+  threeProjects: Project[] = []; 
+
+  constructor(private projectService: ProjectService) { }
 
   ngOnInit() {
-  }
+    this.projects = this.projectService.getProjects();
 
+    for (var i = 0; i < 1; i++) {
+      var random = Math.floor(Math.random() * this.projects.length)
+      this.threeProjects.push(this.projects[random]);
+    }
+  }
 }

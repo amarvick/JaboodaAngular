@@ -37,13 +37,12 @@
 </div>
 
 <div class="container imgContainer"
+  *ngIf="threeProjects"
   fxLayout="column"
   fxLayoutAlign="center center">
   <div class="container"
-    fxLayout.md="row"
-    fxLayout.xs="column">
-    <img fxFlex="33.333333333" src="../assets/images/house4.jpg">
-    <img fxFlex="33.333333333" src="../assets/images/house4.jpg">
-    <img fxFlex="33.333333333" src="../assets/images/house4.jpg">
+    *ngFor="let project of threeProjects" 
+    fxLayout="row">
+    <img fxFlex="33.333333333" style="height: 100%; width: 100%;" src="{{ project.images[0] }}">
   </div>
 </div>
