@@ -20,26 +20,29 @@
 	<a href="careers#FRAMER"> Framer </a>
 
 
-
 	<hr>
 
-<div *ngIf="careers">
+	<div *ngIf="careers">
 
-	<section class="section-position">
+		<section class="section-position">
 
+			<mat-list *ngFor="let career of careers">
+				<h2 id={{career.identifier}} >{{ career.jobtitle }}  </h2>
 
+				<p> {{career.headline}} </p>
 
-	<mat-list *ngFor="let career of careers">
-		<mat-list-item>{{ career }} </mat-list-item>
+				<mat-list-item> {{career.requirements}} </mat-list-item>
 
-	</mat-list>
+				<hr>
+
+			</mat-list>
+
+		</section>
 
 	</div>
-		
-
-	</section>
 
 <!--
+
 
 	<section class="section-position">
 
@@ -151,7 +154,7 @@
 
 	<hr>
 
-	-->
+-->
 
-	<p>Got our skills? Send over a résumé and cover letter to our e-mail at jaboodahomes@yahoo.com</p>
+<p>Got our skills? Send over a résumé and cover letter to our e-mail at jaboodahomes@yahoo.com</p>
 </section>
