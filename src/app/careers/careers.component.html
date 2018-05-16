@@ -26,16 +26,19 @@
 
 		<section class="section-position">
 
-			<mat-list *ngFor="let career of careers">
+			<div *ngFor="let career of careers">
 				<h2 id={{career.identifier}} >{{ career.jobtitle }}  </h2>
 
-				<p> {{career.headline}} </p>
+				<p> Primary responsibilities include </p>
 
-				<mat-list-item> {{career.requirements}} </mat-list-item>
-
+				<mat-list *ngFor="let careerrequirement of career.requirements"> 
+				<mat-list-item>
+				{{careerrequirement}} 
+				</mat-list-item>
+				</mat-list>
 				<hr>
 
-			</mat-list>
+			</div>
 
 		</section>
 

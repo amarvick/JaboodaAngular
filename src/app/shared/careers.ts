@@ -6,7 +6,6 @@ export const CAREERS: Career[]  = [
 	id: 0,
 	identifier: "Superintendent", 
 	jobtitle: "SUPERINTENDENT",
-	headline: "Primary responsibilities include", 
 	requirements: [ 
 	'Supervising construction activities',
 	'Must be able to develop positive relationships betwen customers and suppliers; both orally and written',
@@ -24,7 +23,6 @@ export const CAREERS: Career[]  = [
 	id: 1,
 	identifier: "PROJECT_MANAGER", 
 	jobtitle: "PROJECT MANAGER",
-	headline: "Primary responsibilities include", 
 	requirements: [ 
 	'Strong listening skills; being able to address clients needs with understanding',
 	'Build rapport with clients, sales representatives and other peers',
@@ -41,9 +39,7 @@ export const CAREERS: Career[]  = [
 {
 	id: 2,
 	identifier: "EXCAVATOR_OPERATOR", 
-
 	jobtitle: "EXCAVATOR OPERATOR",
-	headline: "Primary responsibilities include", 
 	requirements: [ 
 	'Conduct operation of excavators and additional associated equipment',
 	'Working in accordance to plans and specifications',
@@ -63,9 +59,7 @@ export const CAREERS: Career[]  = [
 {
 	id: 3,
 	identifier: "FOREMAN", 
-
 	jobtitle: "FOREMAN",
-	headline: "Primary responsibilities include", 
 	requirements: [ 
 	'Train, direct, supervise and discipline crews on a given project',
 	'Present strong leadership roles while maintaining a positive attitude',
@@ -81,9 +75,7 @@ export const CAREERS: Career[]  = [
 {
 	id: 4,
 	identifier: "FRAMER", 
-
 	jobtitle: "FRAMER",
-	headline: "Primary responsibilities include", 
 	requirements: [ 
 	'Build and repair wooden structures',
 	'Measure, cut and assemble lumber with precision',
