@@ -1,134 +1,160 @@
 <section class="content">
-			<h1>JOIN OUR TEAM!</h1>
+	<h1>JOIN OUR TEAM!</h1>
 
-			<p>At Jabooda, we are always seeking out highly talented individuals with the motivation to push our team forward. Check out our openings below.</p>
+	<p>At Jabooda, we are always seeking out highly talented individuals with the motivation to push our team forward. Check out our openings below.</p>
 
-			<p>Please note that all positions require that the candidate have 3 to 4 years of experience minimum within the respective field. Candidates must be able to work independently and have prior knowledge.</p>
+	<p>Please note that all positions require that the candidate have 3 to 4 years of experience minimum within the respective field. Candidates must be able to work independently and have prior knowledge.</p>
 
-			<br>
+	<br>
 
-			<h2> Positions </h2>
+	<h2> Positions </h2>
 
-			<a href="careers#Superintendent"> Superintendent </a>
-			<br>
-			<a href="careers#PROJECT_MANAGER"> Project Manager </a>
-			<br>
-			<a href="careers#EXCAVATOR_OPERATOR"> Excavator Operator </a>
-			<br>
-			<a href="careers#FOREMAN"> Foreman </a>
-			<br>
-			<a href="careers#FRAMER"> Framer </a>
-
-
-
-			<hr>
+	<a href="careers#Superintendent"> Superintendent </a>
+	<br>
+	<a href="careers#PROJECT_MANAGER"> Project Manager </a>
+	<br>
+	<a href="careers#EXCAVATOR_OPERATOR"> Excavator Operator </a>
+	<br>
+	<a href="careers#FOREMAN"> Foreman </a>
+	<br>
+	<a href="careers#FRAMER"> Framer </a>
 
 
-			<section class="section-position">
+	<hr>
 
-			
-				<h2 id="Superintendent">SUPERINTENDENT</h2> 
+	<div *ngIf="careers">
 
-				<p>Primary responsibilities include:</p>
+		<section class="section-position">
 
-				<br>
+			<mat-list *ngFor="let career of careers">
+				<h2 id={{career.identifier}} >{{ career.jobtitle }}  </h2>
 
-				<li>Supervising construction activities</li>
-				<li>Must be able to develop positive relationships betwen customers and suppliers; both orally and written</li>
-				<li>Must be able to direct all field personnel to be able to complete projects on schedule, within budget and is compliant to original plans and specifications</li>
-				<li>An active problem solver who is able to oversee all work done within the field</li>
-				<li>Analyzes problems and can make quick decisions considering risks, objectives, costs and other implications</li>
-				<li>Strong organizational skills is a must</li>
-				<li>Ensures job safety among all workers</li>
-				<li>Maintains an organized and clean job site</li>
+				<p> {{career.headline}} </p>
 
+				<mat-list-item> {{career.requirements}} </mat-list-item>
 
-			</section>
+				<hr>
 
-			<hr>
+			</mat-list>
 
-			<section class="section-position">
-
-				<h2 id="PROJECT_MANAGER">PROJECT MANAGER</h2>
-
-				<p>Primary responsibilities include:</p>
-
-				<br>
-
-				<li>Strong listening skills; being able to address clients' needs with understanding</li>
-				<li>Build rapport with clients, sales representatives and other peers</li>
-				<li>Prioritize workload without supervision</li>
-				<li>Ability to develop cost estimates for projects</li>
-				<li>Strong attention to detail</li>
-				<li>Analyze construction details thoroughly</li>
-				<li>Manage order and quoting processes</li>
-				<li>Supply thorough interpretations of design drawings and other conceptual documents</li>
-
-			</section>
-
-			<hr>
-
-			<section class="section-position">
-
-				<h2 id="EXCAVATOR_OPERATOR">EXCAVATOR OPERATOR</h2>
-
-				<p>Primary responsibilities include:</p>
-
-				<br>
-
-				<li>Conduct operation of excavators and additional associated equipment</li>
-				<li>Working in accordance to plans and specifications</li>
-				<li>Transport load and unload materials</li>
-				<li>Respectful of traffic control</li>
-				<li>Report any dangers and hazards in the field</li>
-				<li>Act with the customer in mind</li>
-				<li>Strong attention to detail is a must</li>
-				<li>Include excellent quality of workmanship at all times</li>
-				<li>Ask questions if ever unsure</li>
-				<li>Maintain excellent relationships with clients and provide a positive force in the field</li>
-				<li>Continually improve service, productivity and efficiency</li>
-
-			</section>
-
-			<hr>
-
-			<section class="section-position">
-
-				<h2 id="FOREMAN">FOREMAN</h2>
-
-				<p>Primary responsibilities include:</p>
-
-				<br>
-
-				<li>Train, direct, supervise and discipline crews on a given project</li>
-				<li>Present strong leadership roles while maintaining a positive attitude</li>
-				<li>Evaluate progress and provide assistance to peers to strengthen their abilities in their respective role</li>
-				<li>Be able to listen to any concerns of workers on the field and solve problems</li>
-				<li>Folllow blueprints, sketches and suggest changes when necessary</li>
-				<li>Track employee attendance and manage work schedules for each individual</li>
-				<li>Aiding subordinates to get jobs completed</li>
-
-			</section>
-
-			<hr>
-
-			<section class="section-position">
-
-				<h2 id="FRAMER">FRAMER</h2>
-
-				<p>Primary responsibilities include:</p>
-				
-				<br>
-
-				<li>Build and repair wooden structures</li>
-				<li>Measure, cut and assemble lumber with precision</li>
-				<li>Be able to analyze blueprints with a strong attention to detail</li>
-				<li>Be able to lift and carry heavy framing lumber, sheets of plywood and other materials</li>
-				<li>Strong analytical and mathematical skills</li>
-
-			</section>
-
-			<hr>
-
-			<p>Got our skills? Send over a résumé and cover letter to our e-mail at jaboodahomes@yahoo.com</p>
 		</section>
+
+	</div>
+
+<!--
+
+
+	<section class="section-position">
+
+
+		<h2 id="Superintendent">SUPERINTENDENT</h2> 
+
+		<p>Primary responsibilities include:</p>
+
+		<br>
+
+		<mat-list>
+
+			<mat-list-item>Supervising construction activities</mat-list-item>
+			<mat-list-item>Must be able to develop positive relationships betwen customers and suppliers; both orally and written</mat-list-item>
+			<mat-list-item>Must be able to direct all field personnel to be able to complete projects on schedule, within budget and is compliant to original plans and specifications</mat-list-item>
+			<mat-list-item>An active problem solver who is able to oversee all work done within the field</mat-list-item>
+			<mat-list-item>Analyzes problems and can make quick decisions considering risks, objectives, costs and other implications</mat-list-item>
+			<mat-list-item>Strong organizational skills is a must</mat-list-item>
+			<mat-list-item>Ensures job safety among all workers</mat-list-item>
+			<mat-list-item>Maintains an organized and clean job site</mat-list-item>
+
+		</mat-list>
+
+
+	</section>
+
+	<hr>
+
+	<section class="section-position">
+
+		<h2 id="PROJECT_MANAGER">PROJECT MANAGER</h2>
+
+		<p>Primary responsibilities include:</p>
+
+		<br>
+
+		<li>Strong listening skills; being able to address clients' needs with understanding</li>
+		<li>Build rapport with clients, sales representatives and other peers</li>
+		<li>Prioritize workload without supervision</li>
+		<li>Ability to develop cost estimates for projects</li>
+		<li>Strong attention to detail</li>
+		<li>Analyze construction details thoroughly</li>
+		<li>Manage order and quoting processes</li>
+		<li>Supply thorough interpretations of design drawings and other conceptual documents</li>
+
+	</section>
+
+	<hr>
+
+	<section class="section-position">
+
+		<h2 id="EXCAVATOR_OPERATOR">EXCAVATOR OPERATOR</h2>
+
+		<p>Primary responsibilities include:</p>
+
+		<br>
+
+		<li>Conduct operation of excavators and additional associated equipment</li>
+		<li>Working in accordance to plans and specifications</li>
+		<li>Transport load and unload materials</li>
+		<li>Respectful of traffic control</li>
+		<li>Report any dangers and hazards in the field</li>
+		<li>Act with the customer in mind</li>
+		<li>Strong attention to detail is a must</li>
+		<li>Include excellent quality of workmanship at all times</li>
+		<li>Ask questions if ever unsure</li>
+		<li>Maintain excellent relationships with clients and provide a positive force in the field</li>
+		<li>Continually improve service, productivity and efficiency</li>
+
+	</section>
+
+	<hr>
+
+	<section class="section-position">
+
+		<h2 id="FOREMAN">FOREMAN</h2>
+
+		<p>Primary responsibilities include:</p>
+
+		<br>
+
+		<li>Train, direct, supervise and discipline crews on a given project</li>
+		<li>Present strong leadership roles while maintaining a positive attitude</li>
+		<li>Evaluate progress and provide assistance to peers to strengthen their abilities in their respective role</li>
+		<li>Be able to listen to any concerns of workers on the field and solve problems</li>
+		<li>Folllow blueprints, sketches and suggest changes when necessary</li>
+		<li>Track employee attendance and manage work schedules for each individual</li>
+		<li>Aiding subordinates to get jobs completed</li>
+
+	</section>
+
+	<hr>
+
+	<section class="section-position">
+
+		<h2 id="FRAMER">FRAMER</h2>
+
+		<p>Primary responsibilities include:</p>
+
+		<br>
+
+		<li>Build and repair wooden structures</li>
+		<li>Measure, cut and assemble lumber with precision</li>
+		<li>Be able to analyze blueprints with a strong attention to detail</li>
+		<li>Be able to lift and carry heavy framing lumber, sheets of plywood and other materials</li>
+		<li>Strong analytical and mathematical skills</li>
+
+	</section>
+
+	<hr>
+
+-->
+
+<p>Got our skills? Send over a résumé and cover letter to our e-mail at jaboodahomes@yahoo.com</p>
+</section>

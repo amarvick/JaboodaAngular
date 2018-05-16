@@ -4,6 +4,7 @@ export const CAREERS: Career[]  = [
 
 {
 	id: 0,
+	identifier: "Superintendent", 
 	jobtitle: "SUPERINTENDENT",
 	headline: "Primary responsibilities include", 
 	requirements: [ 
@@ -21,6 +22,7 @@ export const CAREERS: Career[]  = [
 
 {
 	id: 1,
+	identifier: "PROJECT_MANAGER", 
 	jobtitle: "PROJECT MANAGER",
 	headline: "Primary responsibilities include", 
 	requirements: [ 
@@ -38,6 +40,8 @@ export const CAREERS: Career[]  = [
 
 {
 	id: 2,
+	identifier: "EXCAVATOR_OPERATOR", 
+
 	jobtitle: "EXCAVATOR OPERATOR",
 	headline: "Primary responsibilities include", 
 	requirements: [ 
@@ -58,6 +62,8 @@ export const CAREERS: Career[]  = [
 
 {
 	id: 3,
+	identifier: "FOREMAN", 
+
 	jobtitle: "FOREMAN",
 	headline: "Primary responsibilities include", 
 	requirements: [ 
@@ -74,6 +80,8 @@ export const CAREERS: Career[]  = [
 
 {
 	id: 4,
+	identifier: "FRAMER", 
+
 	jobtitle: "FRAMER",
 	headline: "Primary responsibilities include", 
 	requirements: [ 
