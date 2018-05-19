@@ -3,6 +3,12 @@ img {
     width: 500px;
 }
 
+#mainImageWrapper {
+    height: 100%;
+    width: 100%;
+    
+}
+
 .container {
     margin: auto;
     text-align: center;
@@ -20,7 +26,6 @@ img {
 #preWrapper {
     width: 100%;
     overflow-x: scroll;
-    
 }
 
 #imageWrapper {
