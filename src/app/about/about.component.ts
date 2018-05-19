@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Staff } from '../shared/staff'; 
+import { StaffService } from '../services/staff.service'; 
+
+
+
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -7,9 +12,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+	staff: Staff[]; 
+
+  constructor(private staffService: StaffService) { }
 
   ngOnInit() {
+  	this.staff = this.staffService.getStaff(); 
   }
 
 }
