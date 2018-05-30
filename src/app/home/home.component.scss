@@ -58,3 +58,38 @@ $dark-font: #272727;
         position: relative;
     }
 }
+
+#mainImageWrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: black;
+
+    img {
+        max-width: 100%;
+        opacity: 0.4;
+    }
+}
+
+#projects {
+    text-align: center;
+
+    p {
+        position: relative; 
+        color: white; 
+        top: -320px; 
+        font-size: 46px;
+    }
+}
+
+#careers {
+    position: relative;
+    top: -150px;
+
+    margin-bottom: -110px;
+
+    a {
+        background-color: $dark-font;
+        color: #D9D9D9;
+    }
+}
