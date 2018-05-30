@@ -4,7 +4,7 @@ export const STAFF: Staff[] = [
 
 {
 	id: 0,  
-	photo: "image.jpg",
+	photo: "john.jpg",
 	name: "John Doe",
 	bio: "Loves long walks on the beach" 
 
@@ -12,14 +12,14 @@ export const STAFF: Staff[] = [
 
 {
 	id: 1, 
-	photo: "image1.jpg", 
+	photo: "jane.jpg", 
 	name: "Jane Doe", 
 	bio: "Likes to cook"
 }, 
 
 { 
 	id: 2, 
-	photo: "image2.jpg", 
+	photo: "bob.jpg", 
 	name: "Bob", 
 	bio: "Likes hiking"
 
@@ -27,7 +27,7 @@ export const STAFF: Staff[] = [
 
 {
 	id: 3, 
-	photo: "image3.jpg", 
+	photo: "jess.jpg", 
 	name: "Jess",
 	bio: "Loves travelling"
 }

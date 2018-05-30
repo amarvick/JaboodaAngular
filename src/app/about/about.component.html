@@ -20,14 +20,32 @@ fxLayout="row">
 </p>
 </div>
 </div>
+<!--
+<div class="container"
+fxLayout="row"> 
+
+<div fxLayout="column" fxFlex="33"> </div>
+
+<div fxLayout="column" fxFlex="33" *ngIf="staff"> -->
 
 <div *ngIf="staff">
+<div class ="staffgrid">
 
-	<div *ngFor="let eachstaff of staff">  
+	<div class="col-2" *ngFor="let eachstaff of staff">  
 
-		<img src={{eachstaff.photo}}> 
+		<div class = "card">
+			<img src="../assets/images/{{eachstaff.photo}}" > 
+			<p><b> {{eachstaff.name}} </b></p>
+			<p> {{eachstaff.bio}} </p>
+
+		</div>
+	</div>
 
 	</div>
-	
 
 </div>
+<!--
+<div fxLayout="column" fxFlex="33"> </div> -->
+
+
+
