@@ -34,8 +34,8 @@ fxLayout="row">
 			<div class="staffgrid" *ngFor="let eachstaff of staff">  
 
 				<img src="../assets/images/{{eachstaff.photo}}" > 
-				<p><b> {{eachstaff.name}} </b></p>
-				<p> {{eachstaff.bio}} </p>
+				<p id="biotext"><b> {{eachstaff.name}} </b></p>
+				<p id="biotext"> {{eachstaff.bio}} </p>
 
 			</div>
 
@@ -43,7 +43,7 @@ fxLayout="row">
 		</div>
 
 	</div>
-	
+
 <!--
 	<div fxLayout="column" fxFlex="33"> </div> -->
 
