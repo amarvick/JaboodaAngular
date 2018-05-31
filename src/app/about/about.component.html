@@ -28,24 +28,24 @@ fxLayout="row">
 
 <div fxLayout="column" fxFlex="33" *ngIf="staff"> -->
 
-<div *ngIf="staff">
-<div class ="staffgrid">
+	<div *ngIf="staff">
+		<div class ="staffgrid">
 
-	<div class="col-2" *ngFor="let eachstaff of staff">  
+			<div class="staffgrid" *ngFor="let eachstaff of staff">  
 
-		<div class = "card">
-			<img src="../assets/images/{{eachstaff.photo}}" > 
-			<p><b> {{eachstaff.name}} </b></p>
-			<p> {{eachstaff.bio}} </p>
+				<img src="../assets/images/{{eachstaff.photo}}" > 
+				<p><b> {{eachstaff.name}} </b></p>
+				<p> {{eachstaff.bio}} </p>
+
+			</div>
+
 
 		</div>
-	</div>
 
 	</div>
-
-</div>
+	
 <!--
-<div fxLayout="column" fxFlex="33"> </div> -->
+	<div fxLayout="column" fxFlex="33"> </div> -->
 
 
 
