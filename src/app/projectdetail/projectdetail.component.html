@@ -1,0 +1,25 @@
+<div class="container"
+  fxLayout="row"
+  fxLayoutGap="10px">
+
+  <div fxFlex=100>
+    <mat-card *ngIf="project">
+      <mat-card-content id="mainImageWrapper">
+        <img src="{{ mainImage }}" (click)="openDialog(project)">
+      </mat-card-content>
+      <mat-card-header>
+        <mat-card-title><h1>{{ project.address | uppercase }}</h1></mat-card-title>
+      </mat-card-header>
+      <mat-card-content id="preWrapper">
+        <mat-card-content id="imageWrapper">
+          <mat-card-content id="imageContainer" *ngFor="let image of project.images">
+            <img src="{{ image }}" (click)="changeImage(image)" />
+          </mat-card-content>
+        </mat-card-content>
+      </mat-card-content>
+      <mat-card-content>
+        <p>{{ project.description }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

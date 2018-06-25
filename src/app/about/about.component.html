@@ -1,0 +1,51 @@
+<div class="container"
+fxLayout="column"
+fxLayoutAlign="center center">
+
+<div class="container top"
+fxLayout="row">
+<img src="../assets/images/Executive.png" height="600px">
+</div>
+
+<div class="container"
+style="text-align: center;"
+fxLayout="row">
+
+<p style="width: 85%;">
+	Jabooda Homes Inc is based in Mercer Island, WA and holds JABOOHI853D7 (Construction Contractor, General) licenses according to the Washington license board. 
+	We have over 10 years of experience with construction and development, and make construction processes simple by maintaining friendly client relationships. 
+	Our homes are built in modern, contemporary, traditional and custom styles; many with Green Four Star certifications included. We are members of the Master 
+	Builders Association, with one objective in mind: to fulfill and satisfy everyone's needs inside their home. Our projects include both custom and spec 
+	residential homes; both multi-family and single-family homes. We take proud responsibility for all of our work.
+</p>
+</div>
+</div>
+<!--
+<div class="container"
+fxLayout="row"> 
+
+<div fxLayout="column" fxFlex="33"> </div>
+
+<div fxLayout="column" fxFlex="33" *ngIf="staff"> -->
+
+	<div *ngIf="staff">
+		<div class ="staffgrid">
+
+			<div class="staffgrid" *ngFor="let eachstaff of staff">  
+
+				<img src="../assets/images/{{eachstaff.photo}}" > 
+				<p id="biotext"><b> {{eachstaff.name}} </b></p>
+				<p id="biotext"> {{eachstaff.bio}} </p>
+
+			</div>
+
+
+		</div>
+
+	</div>
+
+<!--
+	<div fxLayout="column" fxFlex="33"> </div> -->
+
+
+

@@ -1,0 +1,32 @@
+$dark-font: #272727;
+
+.container {
+    color: $dark-font;
+
+    .top {
+        padding-top: 55px;
+
+        img {
+            position: relative;
+            left: 50px;
+        }
+    }
+
+    h1 {
+        font-size: 86px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+#biotext{
+    text-align: center; 
+
+}
+
+.staffgrid{
+    display: inline-block;
+    padding: 30px;
+}

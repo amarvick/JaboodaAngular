@@ -1,0 +1,24 @@
+$jabooda-blue: #01427C;
+$jabooda-blue-darker: #013967;
+
+mat-toolbar {
+    background-color: $jabooda-blue;
+    color: white;
+}
+
+a, a:hover, a:visited {
+    margin: 5px;
+}
+
+.active {
+    background: $jabooda-blue-darker;
+    border-radius: 2px;
+}
+
+.example-icon {
+    padding: 0 14px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}

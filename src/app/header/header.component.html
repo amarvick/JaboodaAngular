@@ -1,0 +1,24 @@
+<div>
+  <mat-toolbar>
+    <button mat-icon-button fxShow="true" fxHide.gt-sm>
+      <button mat-button [matMenuTriggerFor]="menu"><span class="fa fa-align-justify fa-lg"></span> Menu</button>
+    </button>
+    <div fxShow="true" fxHide.lt-md="true">
+      <a mat-button routerLink="/home" routerLinkActive="active"><span class="fa fa-home fa-lg"></span> Home</a>
+      <a mat-button routerLink="/about" routerLinkActive="active"><span class="fa fa-info fa-lg"></span> About</a>
+      <a mat-button routerLink="/projects" routerLinkActive="active"><span class="fa fa-map-o fa-lg"></span> Projects</a>
+      <a mat-button routerLink="/subcontracting" routerLinkActive="active"><span class="fa fa-user fa-lg"></span> Subcontracting</a>
+      <a mat-button routerLink="/careers" routerLinkActive="active"><span class="fa fa-briefcase fa-lg"></span> Careers</a>
+      <a mat-button routerLink="/contactus" routerLinkActive="active"><span class="fa fa-address-card fa-lg"></span> Contact Us</a>
+    </div>
+  </mat-toolbar>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/home" routerLinkActive="active"><span class="fa fa-home fa-lg"></span> Home</button>
+    <button mat-menu-item routerLink="/about" routerLinkActive="active"><span class="fa fa-info fa-lg"></span> About</button>
+    <button mat-menu-item routerLink="/projects" routerLinkActive="active"><span class="fa fa-map-o fa-lg"></span> Projects</button>
+    <button mat-menu-item routerLink="/subcontracting" routerLinkActive="active"><span class="fa fa-user fa-lg"></span> Subcontracting</button>
+    <button mat-menu-item routerLink="/careers" routerLinkActive="active"><span class="fa fa-briefcase fa-lg"></span> Careers</button>
+    <button mat-menu-item routerLink="/contactus" routerLinkActive="active"><span class="fa fa-address-card fa-lg"></span> Contact Us</button>
+  </mat-menu>
+</div>

@@ -1,0 +1,23 @@
+<div class="container"
+  fxLayout.sm="row"
+  fxLayout.xs="column">  
+
+  <div fxFlex=60>
+    <app-projectdetail [project]="selectedProject"></app-projectdetail> 
+  </div> 
+
+  <div fxFlex=40 *ngIf="projects">
+    <mat-grid-list cols="1" rowHeight="300px">
+      <mat-grid-tile *ngFor="let project of projects" (click)="onSelect(project)"
+        flex-offset-sm>
+        <!-- <mat-grid-content> -->
+          <img src="{{ project.images[0] }}">
+        <!-- </mat-grid-content> -->
+        <mat-grid-tile-footer>
+          <h1 mat-line ngDefaultControl>{{ project.address | uppercase }}</h1>
+        </mat-grid-tile-footer>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+</div>
